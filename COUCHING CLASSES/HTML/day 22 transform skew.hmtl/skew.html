@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>skew</title>
+    <style>
+      .parent {
+        width: 400px;
+        height: 400px;
+        box-shadow: 0px 0px 4px grey;
+        margin: 100px auto;
+        transform: translateX(-300px);
+        transition: 1s;
+        transform: skew(0deg);
+      }
+      .parent:hover {
+        transform: skew(5deg);
+        box-shadow: none;
+      }
+      .parent:hover img {
+        transform: translate(0px);
+        opacity: 1;
+      }
+      .parent img {
+        transform: translateX(800px);
+        opacity: 0;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <img
+        src="https://picsum.photos/200/300"
+        alt=""
+        width="100%"
+        height="100%"
+      />
+    </div>
+  </body>
+</html>

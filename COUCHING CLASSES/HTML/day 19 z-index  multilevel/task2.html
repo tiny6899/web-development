@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      nav {
+        width: 1000px;
+        border: 1px solid black;
+        margin: 100px auto;
+      }
+      #main-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        position: relative;
+        font-size: 20px;
+        transition: 0.5s;
+      }
+
+      #main-menu > li {
+        padding: 20px 0px;
+        cursor: pointer;
+      }
+      .fa {
+        transition: 0.5s;
+      }
+
+      #main-menu > li:hover .child-menu {
+        /* top: 65px; */
+        opacity: 1;
+        transform: scaleY(1);
+        transition: 0.5s;
+      }
+
+      #main-menu > li:hover .fa-caret-down {
+        transform: rotate(180deg);
+      }
+      .child-menu {
+        position: absolute;
+        transform-origin: top center;
+        list-style: none;
+        box-shadow: 0px 0px 2px grey;
+        width: 1000px;
+        top: 65px;
+        opacity: 0;
+        left: 0;
+        transform: scaleY(0);
+      }
+
+      .child-menu > li:hover .subchild {
+        top: 20px;
+        opacity: 1;
+      }
+      .child-menu > li:hover .fa-caret-down {
+        transform: rotate(180deg);
+      }
+      .child-menu li {
+        border-bottom: 1px solid grey;
+        padding: 10px 0px;
+        padding-left: 5px;
+      }
+      .child-menu li:last-child {
+        border-bottom: none;
+      }
+
+      .subchild {
+        list-style: none;
+        position: absolute;
+        margin-left: 200px;
+        border: 1px solid grey;
+        width: 150px;
+        background: white;
+        top: 100px;
+        opacity: 0;
+      }
+      .subchild li {
+        border-bottom: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul id="main-menu">
+        <li>
+          first <i class="fa fa-caret-down"></i>
+          <ul class="child-menu">
+            <li>
+              box 1
+              <i class="fa fa-caret-down"></i>
+
+              <ul class="subchild">
+                <li>RED</li>
+                <li>BLUE</li>
+                <li>GREEN</li>
+              </ul>
+            </li>
+            <li>box 2</li>
+            <li>box 3</li>
+            <li>box 4</li>
+            <li>box 5</li>
+          </ul>
+        </li>
+        <li>
+          second <i class="fa fa-caret-down"></i>
+          <ul class="child-menu">
+            <li>india</li>
+            <li>america</li>
+            <li>japan</li>
+            <li>canada</li>
+          </ul>
+        </li>
+        <li>third</li>
+        <li>fourth</li>
+        <li>fifth</li>
+      </ul>
+    </nav>
+    <script
+      src="https://kit.fontawesome.com/085c2bdc39.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

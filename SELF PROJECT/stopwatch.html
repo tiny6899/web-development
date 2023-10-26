@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop watch</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background: black;
+        }
+
+        .container{
+           text-align: center;
+            font-size: 100px;
+            color: white;
+        
+        }
+        .btn{
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            
+        }
+         button{
+            font-size: 50px;
+            
+         }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <span id="hrs">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+    </div>
+    <div class="btn">
+        <button id="stop">Stop</button>
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+</div>
+
+<script>
+    var hrs=document.querySelector("#hrs");
+    var min=document.querySelector("#min");
+    var sec=document.querySelector("#sec");
+
+    var stop=document.querySelector("#stop");
+    var start=document.querySelector("#start");
+    var reset=document.querySelector("#reset");
+    var count=0;
+    var num=1;
+
+    start.addEventListener(
+        "click",
+        function(){
+            setInterval(
+    function(){
+        
+        count++;
+            sec.innerHTML=count;
+            if(count<=60) stop();
+            
+            
+        
+       
+    },
+    1000
+)
+        }
+    )
+    
+
+    
+</script>
+</body>
+</html>

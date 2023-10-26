@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .parent{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin:  30px auto ;
+            overflow: hidden;
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+            transform: translateX(0);
+        }
+        .box img{
+            width: 100%;
+            height: 100%;
+        }
+        .btn{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 20px;
+        }
+        button{
+            text-align: center;
+            font-size: 30px;
+            width: 90px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box"><img src="https://picsum.photos/id/237/200/300" alt=""></div>
+        <div class="box"><img src="https://picsum.photos/id/238/200/300" alt=""></div>
+        <div class="box"><img src="https://picsum.photos/id/239/200/300" alt=""></div>
+        <div class="box"><img src="https://picsum.photos/id/240/200/300" alt=""></div>
+        <div class="box"><img src="https://picsum.photos/id/241/200/300" alt=""></div>
+    </div>
+   <div class="btn"> 
+    <button onclick="Up()">Up</button>
+           <button onclick="Down()">Down</button>
+             
+    </div>
+
+
+
+    <script>
+        var boxes=document.querySelectorAll(".box");
+
+        var index=0;
+
+        function down(){
+            index++;
+            for(var i=index; i<boxes.length; i++){
+               boxes[0].style.transform=((`-${index}*100`));   
+            }
+        }
+    </script>
+</body>
+</html>

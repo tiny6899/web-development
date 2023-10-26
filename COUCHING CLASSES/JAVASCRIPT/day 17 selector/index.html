@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ------------1------------- -->
+<!-- <div id="box">
+    <h1>hello</h1>
+</div>
+
+<script>
+    var box=document.getElementById("box");
+    console.log(box.innerText);
+    console.log(box.innerHTML);
+</script> -->
+
+<!-- ------------2------------- -->
+
+<!-- <div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+
+<script>
+    var a=document.getElementsByClassName("box");
+    console.log(a[0].innerText);
+</script> -->
+
+<!-- ------------3------------- -->
+
+<!-- 
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+
+<script>
+    var dives=document.getElementsByTagName("div");
+    console.log(dives);
+    console.log(dives[2].innerText);
+</script> -->
+
+
+<!-- ------------counter------------- -->
+
+<div class="parent">
+    <h1 id="res">0</h1>
+    <h2 id="price">$ 0</h2>
+    <button onclick="inc()">+</button>
+    <button onclick="dec()">-</button>
+</div>
+
+<script>
+    var resbox=document.getElementById("res");
+    var rupesbox=document.getElementById("price");
+    var count=0;
+    function inc(){
+        count++;
+        resbox.innerText=count;
+        rupesbox.innerText="$"+count*100;
+    }
+    function dec(){
+        if(count==0) return;
+        count--;
+        resbox.innerText=count;
+        rupesbox.innerText= "$"+count*100;
+    }
+</script>
+</body>
+</html>

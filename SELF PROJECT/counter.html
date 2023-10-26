@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 800px;
+            min-height: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        h1{
+            font-size: 80px;
+        }
+        button{
+            border-radius: 50%;
+            border: none;
+            background: orangered;
+            color: black;
+            margin-top: 30px;
+            cursor: pointer;
+
+        }
+        #subt{
+            font-size: 100px;
+            width: 150px;
+            height: 150px;
+            padding-bottom: 10px;
+            
+        }
+        #add{
+            font-size: 100px;
+            width: 250px;
+            height: 250px;
+            padding-bottom: 10px;
+            margin-left: 15px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 id="res">0</h1> 
+        <button id="subt">-</button>
+        <br>
+        <button id="add">+</button>
+    </div>
+
+    <script>
+        var res=document.querySelector("#res");
+        var subt=document.querySelector("#subt");
+        var add=document.querySelector("#add");
+        var count=0;
+
+        add.addEventListener(
+            "click",
+            function(){
+            count++;
+            if(count>=0 && count<=108){
+                res.innerHTML="";
+                res.innerHTML=count;                
+                
+            }
+          
+            }
+        )
+        subt.addEventListener(
+            "click",
+            function(){
+            count--;
+        if(count>=0){
+            res.innerHTML=count;
+        }
+                
+               
+                
+            
+          
+            }
+        )
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical slider</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .parent{
+            width: 400px;
+            margin: 40px auto;
+            height: 500px;
+            overflow: hidden;
+            
+          
+        }
+        .box{
+            width: 100%;
+            transition: 1s;
+            transform: translateY(0);
+            height: 100%;
+            
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            
+        }
+        .btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            
+        }
+        button{
+            font-size: 30px;
+            text-align: center;
+            background: black;
+            color: white;
+            width: 90px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+      
+    </style>
+ </head>
+ <body>
+    <div class="parent">
+        <div class="box"><img src="https://picsum.photos/id/237/600/500" alt=""></div>
+        <div class="box"><img src="https://picsum.photos/id/238/600/500" alt=""></div>
+        <div class="box"><img src="https://picsum.photos/id/239/600/500" alt=""></div>
+        <div class="box"><img src="https://picsum.photos/id/240/600/500" alt=""></div>
+        <div class="box"><img src="https://picsum.photos/id/241/600/500" alt=""></div>
+    </div>
+    <div class="btn">
+        <button onclick="prev()" >Down</button>
+        <button onclick="next()" >UP</button>
+      
+    </div>
+     
+    <script>
+        var boxes=document.querySelectorAll(".box");
+        var index=0;
+
+        function next(){
+            if(index==boxes.length-1) return;
+            index++;
+            for(var i=0; i<boxes.length; i++){
+                boxes[i].style.transform=`translateY(-${index*100}%)`;
+            }
+            
+        }
+        function prev(){
+            if(index==boxes.length-1) return;
+            index--;
+            for(var i=0; i<boxes.length; i++){
+                boxes[i].style.transform=`translateY(-${index*100}%)`;
+            }
+            
+        }
+    </script>
+ </body>
+ </html>

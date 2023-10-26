@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 400px;
+        background: red;
+        margin: 100px auto;
+        animation-duration: 10s;
+        animation-name: box;
+      }
+      @keyframes box {
+        0% {
+          background: blue;
+        }
+        25% {
+          background: yellow;
+        }
+        50% {
+          background: green;
+        }
+        75% {
+          background: skyblue;
+        }
+        100% {
+          background: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

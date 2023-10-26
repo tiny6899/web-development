@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>solar stytem</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 800px;
+        height: 800px;
+        border: 2px solid grey;
+        margin: auto;
+        border-radius: 50%;
+        transition: 10s;
+        position: relative;
+        transform-origin: center;
+      }
+      .parent:hover {
+        transform: rotate(360deg);
+      }
+
+      .planet {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #5b5ddf;
+        transform: translate(230px);
+      }
+      .parent2 {
+        width: 700px;
+        height: 700px;
+        border: 2px solid grey;
+        margin: 46px 0px 0px 50px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="planet"></div>
+      <div class="parent2">
+        <div
+          class="planet uranus"
+          style="background-color: #e1eeee; transform: translate(50px, 100px)"
+        ></div>
+
+        <div class="parent2" style="height: 600px; width: 600px">
+          <div
+            class="planet uranus"
+            style="
+              background-color: #dbb57c;
+              transform: translate(5px, 500px);
+              height: 55px;
+              width: 55px;
+            "
+          ></div>
+
+          <div class="parent2" style="width: 500px; height: 500px">
+            <div
+              class="planet uranus"
+              style="
+                background-color: #a79c86;
+                transform: translate(400px, 470px);
+              "
+            ></div>
+
+            <div class="parent2" style="width: 400px; height: 400px">
+              <div
+                class="planet uranus"
+                style="
+                  background-color: #e77d11;
+                  transform: translate(310px, 30px);
+                "
+              ></div>
+
+              <div class="parent2" style="width: 300px; height: 300px">
+                <div
+                  class="planet uranus"
+                  style="
+                    background-color: #6b93d6;
+                    transform: translate(150px, 270px);
+                  "
+                ></div>
+
+                <div class="parent2" style="width: 200px; height: 200px">
+                  <div
+                    class="planet uranus"
+                    style="
+                      background-color: #c18f17;
+                      transform: translate(-20px, 70px);
+                    "
+                  ></div>
+
+                  <div class="parent2" style="width: 100px; height: 100px">
+                    <div
+                      class="planet uranus"
+                      style="
+                        background-color: #cdcbca;
+                        transform: translate(3px, 70px);
+                        height: 30px;
+                        width: 30px;
+                      "
+                    ></div>
+
+                    <div
+                      class="parent2"
+                      style="
+                        width: 50px;
+                        height: 50px;
+                        background-color: #fdb813;
+                        transform: translate(-25px, -20px);
+                        border: none;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

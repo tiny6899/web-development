@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greting card</title>
+
+    <style>
+        *{ 
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 1200px;
+            align-items: stretch;
+            display: flex;
+            margin: auto;
+        }
+        .input{
+            width: 50%;
+            padding: 40px;
+            gap: 40px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .input *{
+            font-size: 20px;
+            padding: 10px;
+        }
+        #output{
+            width: 50%;
+            border: 1px solid black;
+
+        }
+        #output .output-box:nth-child(1){
+            margin: 20px ;
+        }
+        #output .output-box:nth-child(2){
+            height: 500px;
+            margin: 20px ;
+            
+        }
+        #output .output-box:nth-child(3){
+            text-align: right;
+            margin: 20px ;
+        }
+        .font-box button{
+            font-size: 30px;
+            width: 40px;
+            margin-top: 10px;    
+        }
+        .font-box button:nth-child(3){
+            font-size: 25px;
+            width: 100px;
+        }
+
+    </style>
+ </head>
+ <body>
+    <div class="main">
+        <div class="input">
+            <input type="text" placeholder="To" class="input-box" onkeyup="getdata(0)">
+            <textarea name="" class="input-box" onkeyup="getdata(1)" placeholder="Message" cols="30" rows="10"></textarea>
+            <input type="text" placeholder="From" onkeyup="getdata(2)" class="input-box">
+        </div>
+
+        <div id="output">
+            <h3 class="output-box">To: </h3>
+            <p class="output-box"></p>
+            <h3 class="output-box">From:</h3>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="font-box">
+            <button onclick="togglefont(true)">+</button>
+            <button onclick="togglefont(false)">-</button>
+            <button onclick="reset()">Reset</button>
+            <input type="color" onchange="getcolor(this.value)">
+        </div>
+       
+    </div>
+   
+    
+
+    <script>
+        var inputbox = document.getElementsByClassName("input-box");
+        var outputbox=document.getElementsByClassName("output-box");
+        var output=document.getElementById("output");
+        var fontsize=16;
+
+        function getdata(index){
+        outputbox[index].innerText=inputbox[index].value;
+        }
+
+        function togglefont(flag){
+            if(flag==true){
+                fontsize+=2;
+            }else{
+                fontsize-=2;
+            }
+            output.style.fontSize=fontsize + "px";
+        }
+
+        function reset(){
+            fontsize=16;
+            output.style.fontSize=fontsize + "px";
+        }
+        function getcolor(colorcode){
+          output.style.backgroundColor=colorcode;
+        }
+    </script>
+ </body>
+ </html>

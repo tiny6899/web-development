@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        margin: 100px auto;
+      }
+      .parent:hover .child2 {
+        transform: rotate(100deg);
+      }
+      .child1 {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        font-size: 25px;
+        background-color: aquamarine;
+      }
+      .child2 {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        transition: 0.5s;
+        transform-origin: top left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nulla
+        a.
+      </div>
+
+      <div class="child2">
+        <img src="img/a44.jpg" alt="" width="100%" height="100%" />
+      </div>
+    </div>
+  </body>
+</html>

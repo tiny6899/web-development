@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 200px;
+        height: 40px;
+        border: 1px solid grey;
+        margin: 100px auto;
+        position: relative;
+        background: white;
+        overflow: hidden;
+      }
+      .parent:hover .box1 {
+        transform: translate(0px);
+      }
+      .parent:hover .box2 {
+        transform: translate(0px);
+      }
+      .parent:hover .text {
+        color: white;
+        transition: 0.5s;
+      }
+      .box1 {
+        width: 50%;
+        height: 100%;
+        background: #fc9e15;
+        position: absolute;
+        transform: translate(-100px);
+        float: left;
+        transition: 0.5s;
+      }
+
+      .text {
+        position: absolute;
+        text-align: center;
+        font-size: 15px;
+        z-index: 1;
+        color: black;
+        padding-left: 30px;
+        padding-top: 6px;
+        font-weight: bold;
+      }
+      .box2 {
+        width: 50%;
+        float: right;
+        transform: translate(100px);
+        height: 100%;
+        background: #fc9e15;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="text">SHOP COLLECTION</div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>

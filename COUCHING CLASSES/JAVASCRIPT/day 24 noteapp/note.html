@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #98E4FF;
+            box-sizing: border-box;
+        }
+        .parent{
+            /* background: #98E4FF; */
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            flex-wrap: wrap;
+            display: flex;
+            
+        }
+        .add{
+            color: white;
+            background: black;
+            font-size: 18px;
+            width: 110px;
+            border-radius: 3px;
+            position: absolute;
+            right: 1%;
+            top: 10px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        .note{
+            width: 25%;
+            height: 350px;
+            background: white;
+            margin-top: 90px; 
+            margin-left: 30px;
+            
+        }
+        .note textarea{
+            width: 99%;
+            height: 293px;
+            border: none;
+            padding-top: 20px;
+            font-size: 25px;
+        }
+        .font{
+            background: black;
+            height: 35px;
+            width: 100;
+            display: flex;
+            position: relative;
+            align-items: center;
+            padding-left: 310px;
+            
+            
+        }
+        /* .fa-solid,.fa-trash-can{
+            color: white;
+            right: 3%;
+            position: absolute;    
+        } */
+        .fa-solid{
+            color: white;
+            padding-left: 16px;
+            cursor: pointer;
+        }
+         
+         
+         
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <button class="add">+ Add New</button>
+        
+    </div>
+
+    <script>
+        var parent=document.querySelector(".parent");
+        var btn=document.querySelector(".add");
+
+        btn.addEventListener(
+            "click",
+            function(){
+                var note=document.createElement("div");
+                note.classList.add("note");
+                parent.appendChild(note);
+
+                var fontdiv=document.createElement("div");
+                fontdiv.classList.add("font");
+                note.appendChild(fontdiv);
+
+                
+                var itag=document.createElement("i");
+                itag.classList.add("fa-solid");
+                 itag.classList.add("fa-floppy-disk");
+                fontdiv.appendChild(itag);
+
+                var itag=document.createElement("i");
+                itag.classList.add("fa-solid");
+                 itag.classList.add("fa-trash-can");
+                fontdiv.appendChild(itag);
+                
+
+                itag.addEventListener(
+                    "click",
+                    function(){
+                     note.remove();
+                    }
+                )
+ 
+
+                    var text=document.createElement("textarea");
+                note.appendChild(text);
+
+            }
+        )
+    </script>
+    
+</body>
+</html>

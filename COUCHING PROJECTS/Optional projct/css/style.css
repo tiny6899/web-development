@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  width: 1000px;
+  height: 1043px;
+  color: #fff;
+  border: 1px solid black;
+  margin: auto;
+}
+
+/* header starts */
+.header {
+  width: 1000px;
+  height: 160px;
+  color: #ffffff;
+}
+
+.logo {
+  width: 173px;
+  height: 123px;
+  margin-left: 38px;
+  margin-top: 20px;
+  float: left;
+}
+
+.header-contact {
+  width: 215px;
+  height: 115px;
+  float: right;
+  margin: 25px 25px 0 0;
+  font-size: 18px;
+  font-family: myriad pro;
+  color: #fff;
+  padding: 12px 54px 0 18px;
+}
+
+.websitename {
+  width: 215px;
+  height: 28px;
+  border-bottom: 1px dotted #085b92;
+  margin-bottom: 6px;
+}
+
+.websitename a {
+  color: #fff;
+  text-decoration: none;
+  font-family: myriad pro;
+  padding-left: 5px;
+  float: left;
+}
+
+/* header ends */
+
+/* navigation starts */
+
+.main-navigation{
+  width: 1000px;
+  height: 43px;
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.main-navigation li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: myriad pro;
+  float: left;
+  padding: 13px 18px;
+  border-right: 1px solid #085b92;
+}
+
+/* navigation ends */

@@ -1,0 +1,103 @@
+ 
+
+@media (min-width:768px){
+    #banner{
+        height: 800px;
+    }
+     
+    .middle-container h1{
+         
+        font-size: 50px;   
+    }
+     
+}
+
+@media (min-width:992px){
+    #banner{
+        height: 100vh;
+    }
+     
+    .top-tray{
+        display: flex;
+    }
+        nav{
+            width: 100%;
+            background: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1;     
+            box-shadow: none;  
+    }
+    .container{
+        padding: 0 10px;
+    }
+    #menu{
+        position: static;
+        background-color: transparent;
+        color: black;
+        height: auto;
+        flex-direction: row;
+        justify-content: end;
+        font-size: 12px;
+        transition: 0s;
+
+    }
+    #ham_menu,#close{
+        display: none;    
+    }
+     
+     .middle-container h1{
+          
+            font-size: 72px;   
+        }
+     .sec2-container{
+        width: auto;
+        margin-left: 0px;
+     }
+     
+     #sec2-img{ 
+        display: block;
+        height: 300px;
+        margin-top: 70px;
+        width: 470px;
+        /* z-index: 1; */
+     }
+     #section2{
+        margin-bottom: -100px;
+     }
+  
+      .food-img{
+        display: flex;
+        gap: 40px;
+      }
+
+      .sec4-contante{
+        width: 570px;
+        padding: 0px 15px;
+        padding-top: 100px;
+        float: left;
+        margin-bottom: 150px;
+      }
+       
+      .sec4-right{
+        width: 570px;
+        height: 330px;
+        margin-top: 80px;
+        float: left;
+        margin-left: 40px;
+    margin-bottom: 150px;
+      }
+        
+       
+
+      
+      
+     
+     
+     
+     
+}

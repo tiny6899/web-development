@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+         .parent{
+            background: lightblue;
+          min-height: 100vh;
+            width: 100%;
+            padding-top: 80px;
+
+         }
+        .box{
+            width: 500px;
+           min-height: 500px;
+            background: white;
+        margin: auto;
+            
+            
+        }
+        .box input{
+            width: 99%;
+            height: 50px;
+            font-size: 20px;
+            border: 1px solid grey;
+            
+        }
+        #to-do-box {
+            width: 100%;
+            padding: 10px;
+
+        
+            
+        }
+        li{
+            width: 95%;
+            background: #3498db;
+            height: 40px;
+            list-style: none;
+            font-size: 30px;
+            margin-top: 8px;
+            position: relative;
+            cursor: pointer;
+        }
+        span{
+            cursor: pointer;
+            position: absolute;
+            right: 1%;
+            color: white;
+        }
+        .done{
+            color: black;
+            background-color: #95a5a6 !important;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box">
+            <input type="text" placeholder="Write here something" id="item">
+        <ul id="to-do-box"></ul>
+        </div>
+    </div>
+
+    <script> 
+    var item=document.querySelector("#item");
+    var todo=document.querySelector("#to-do-box");
+
+         item.addEventListener(
+            "keyup",
+            function(event){
+                if(event.key=="Enter"){
+                    var task=item.value;
+                    item.value="";
+                    var listitem=document.createElement("li");
+                    listitem.addEventListener(
+                        "click",
+                        function (e){
+                           e.target.classList.toggle("done");
+                        }
+                    )
+                    listitem.innerHTML=`${task}
+                    <span onclick="closeme(this)">X</span>`;
+                    listitem.classList.add("demo");
+
+                    todo.appendChild(listitem);
+                    item.innerText="";
+                }
+            }
+         )
+
+         function closeme(span){
+            span.parentNode.remove();
+         }
+    </script>
+</body>
+</html>

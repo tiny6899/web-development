@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+     #parent{
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6); 
+        position: fixed;
+        top: 0;
+        left: 0;  
+        transform: translateY(-100%);
+        transition: 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        /* transform: scale(0,0); */
+     }
+     #card{
+        width: 300px;
+        height: 300px;
+        background: white;
+        border-radius: 10px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     #close{
+        color: white;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        cursor: pointer;
+     }
+    </style>
+ </head>
+ <body>
+    <div id="parent">
+        <div id="card">Hello everyone</div>
+        <span id="close" onclick="getcard(0)">X</span>
+    </div>
+    <button onclick="getcard(1)">login</button>
+
+    <script>
+        var parent=document.getElementById("parent");
+
+function getcard(flag){
+    if(flag==1){
+        parent.style.transform="translateY(0)";
+        parent.style.opacity="1";
+    }else{
+        parent.style.transform="";
+        parent.style.opacity="";
+    }
+}
+        // function getcard(){
+        //     parent.style.transform= "translateY(0)";
+        //     parent.style.transform="scale(1,1)";
+        // }
+        // function closeit(){
+        //     parent.style.transform= "";
+        //     parent.style.transform="scale(0,0)";
+        // }
+    </script>
+ </body>
+ </html>

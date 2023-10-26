@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100%;
+            min-height: 100vh;
+            background: black;
+            color: white;
+            
+        }
+        .clock{ 
+            margin: auto;
+            text-align: center;
+            font-size: 110px;
+            
+        }
+         
+    </style>
+ </head>
+ <body>
+    <div class="main">
+        <div class="clock">
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </div>
+    </div>
+
+    <script>
+        var hrs=document.querySelector("#hrs");
+        var min=document.querySelector("#min");
+        var sec=document.querySelector("#sec");
+
+        setInterval(
+            function(){
+                var currentTime=new Date();
+
+              hrs.innerHTML=(currentTime.getHours()<10?"0":"")+currentTime.getHours();
+              min.innerHTML=(currentTime.getMinutes()<10?"0":"" )+currentTime.getMinutes();
+              sec.innerHTML=(currentTime.getSeconds()<10?"0":"")+currentTime.getSeconds();
+            },
+            1000
+        )
+      
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task 2</title>
+    <style>
+      /* parent 1 */
+      .parent1 {
+        width: 600px;
+        height: 600px;
+        border: 1px solid black;
+        margin: auto;
+        position: relative;
+      }
+      .p1b1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: 1s;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .parent1:hover .p1b1 {
+        top: 500px;
+        left: 500px;
+      }
+
+      /* parent2 */
+      .parent2 {
+        width: 600px;
+        height: 600px;
+        border: 1px solid black;
+        margin: auto;
+        position: relative;
+      }
+      .p2b1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: 1s;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .parent2:hover .p2b1 {
+        top: 0;
+        left: 500px;
+      }
+
+      .p2b2 {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        transition: 1s;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      .parent2:hover .p2b2 {
+        bottom: 0;
+        right: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main" style="display: flex">
+      <div class="parent1">
+        <div class="p1b1">3rd</div>
+      </div>
+
+      <div class="parent2">
+        <div class="p2b1">4th b1</div>
+        <div class="p2b2">4th b2</div>
+      </div>
+    </div>
+  </body>
+</html>

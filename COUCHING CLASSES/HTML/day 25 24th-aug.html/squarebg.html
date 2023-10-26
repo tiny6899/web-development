@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #f1c40f;
+        position: relative;
+        z-index: 1;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: #c0392b;
+        position: absolute;
+        opacity: 0.5;
+        z-index: 0;
+        font-size: 50px;
+      }
+      .box1 {
+        transform: translate(200px, 1000px);
+        animation: box1 20s infinite;
+        animation-delay: 0.2s;
+        transform: rotate(0deg);
+      }
+      .box2 {
+        transform: translate(800px, 1000px);
+        animation: box2 5s infinite;
+        animation-delay: 0.6s;
+      }
+      .box3 {
+        transform: translate(500px, 1000px);
+        animation: box3 5s infinite;
+        animation-delay: 0.8s;
+      }
+      .box4 {
+        transform: translate(600px, 1000px);
+        animation: box4 5s infinite;
+        animation-delay: 1s;
+      }
+      .box5 {
+        transform: translate(300px, 1000px);
+        animation: box5 5s infinite;
+        animation-delay: 1.2s;
+      }
+      .box6 {
+        transform: translate(900px, 1000px);
+        animation: box6 5s infinite;
+        animation-delay: 1.4s;
+      }
+      .box7 {
+        transform: translate(1000px, 1000px);
+        animation: box7 5s infinite;
+        animation-delay: 1.6s;
+      }
+      .box8 {
+        transform: translate(1200px, 1000px);
+        animation: box8 2s infinite;
+        animation-delay: 1.8s;
+      }
+      @keyframes box1 {
+        from {
+          transform: translate(200px, 1000px);
+          transform: rotateZ(360deg);
+        }
+        to {
+          transform: translate(400px, -1000px);
+          transform: rotateZ(360deg);
+        }
+      }
+      @keyframes box2 {
+        from {
+          transform: translate(800px, 1000px);
+          transform: rotate(0deg);
+        }
+        to {
+          transform: translate(500px, -1000px);
+        }
+      }
+      @keyframes box3 {
+        from {
+          transform: translate(500px, 1000px);
+          transform: rotate(0deg);
+        }
+        to {
+          transform: translate(300px, -1000px);
+        }
+      }
+      @keyframes box4 {
+        from {
+          transform: translate(600px, 1000px);
+          transform: rotate(0deg);
+        }
+        to {
+          transform: translate(700px, -1000px);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes box5 {
+        from {
+          transform: translate(300px, 1000px);
+          transform: rotate(0deg);
+        }
+        to {
+          transform: translate(600px, -1000px);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes box6 {
+        from {
+          transform: translateY(900px, 1000px);
+          transform: rotate(0deg);
+        }
+        to {
+          transform: translateY(800px, -1000px);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes box7 {
+        from {
+          transform: translate(1000px, 1000px);
+          transform: rotate(0deg);
+        }
+        to {
+          transform: translate(1000px, -1000px);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes box8 {
+        from {
+          transform: translate(1200px, 1000px);
+          transform: rotate(0deg);
+        }
+        to {
+          transform: translate(1200px, -1000px);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+    <div class="box box6">6</div>
+    <div class="box box7">7</div>
+    <div class="box box8">8</div>
+  </body>
+</html>

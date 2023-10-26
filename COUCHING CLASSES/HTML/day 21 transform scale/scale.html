@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 300px;
+        height: 300px;
+        transform: scale(1, 1);
+        position: relative;
+      }
+
+      .parent:hover .box1 {
+        transform: scale(2, 2);
+        transform: rotateY(180deg);
+        border: 1px solid black;
+      }
+      .parent:hover .box2 {
+        transform: scale(2, 2);
+        transform: rotateY(00deg);
+        border: 1px solid black;
+      }
+      .box1 {
+        width: 300px;
+        height: 300px;
+        transition: 0.5s;
+        text-align: center;
+        font-size: 25px;
+        transition: 0.5s;
+        transform: rotateY(0deg);
+        backface-visibility: hidden;
+        position: absolute;
+      }
+      .box2 {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        transition: 0.5s;
+      }
+
+      .box3 {
+        width: 200px;
+        height: 200px;
+        box-shadow: 0px 0px 3px grey;
+        border: 2px solid black;
+        overflow: hidden;
+      }
+      .box3:hover img {
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box1">
+        <h1>MARVELS</h1>
+        <h3>CAPTAN</h3>
+      </div>
+
+      <div class="box2">
+        <img src="Spider-Man_Gallery.png" alt="" width="100%" height="100%" />
+      </div>
+    </div>
+
+    <div class="box3">
+      <img
+        src="https://picsum.photos/200/300"
+        alt=""
+        width="100%"
+        height="100%"
+        style="transition: 0.5s"
+      />
+    </div>
+  </body>
+</html>

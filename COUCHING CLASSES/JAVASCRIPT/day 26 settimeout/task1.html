@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add li in page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .parent{
+           max-width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            margin:  50px auto;
+            padding-top: 40px;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+        button{
+            font-size: 20px;
+            text-align: center;
+        }
+        input{
+            font-size: 20px;
+        }
+        #box{
+            padding: 20px 0px 0px 20px;
+            
+        }
+    </style>
+ </head>
+ <body>
+    <div class="parent">
+        <input type="text" id="inp">
+        <button id="btn">Click</button>
+        <ul id="box">
+
+        </ul>
+
+        <script>
+            var inp=document.querySelector("#inp");
+            var btn=document.querySelector("#btn");
+            var box=document.querySelector("#box");
+
+            btn.addEventListener(
+                "click",
+                function (){
+                    var num=inp.value;
+                    var count=0;
+                    box.innerHTML="";
+                    if(num==""){
+                        inp.focus();
+                        return;
+                    }
+                    var inthold=setInterval(
+                        function (){
+                            count++;
+                            var item=document.createElement("li");
+                            item.innerText=count;
+                            box.appendChild(item);
+                            if(num==count){
+                                clearInterval(inthold);
+                            }
+                        },
+                        1000
+                    )
+                }
+            )
+        </script>
+    </div>
+ </body>
+ </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image src</title>
+    
+</head>
+<body> 
+    <!-- <div id="main" style="background-image: url('https://picsum.photos/id/237/200/300');"></div> -->
+    <img src="https://picsum.photos/id/237/200/300" alt=""    id="main" onclick="getsrc(this)" width="500" height="500">
+    <br>
+    <img src="https://picsum.photos/id/238/200/300" alt=""    onmouseenter="getsrc(this)" width="100">
+    <img src="https://picsum.photos/id/239/200/300" alt=""   onmouseenter="getsrc(this)" width="100">
+    <img src="https://picsum.photos/id/240/200/300" alt=""   onmouseenter="getsrc(this)" width="100">
+    <script>
+
+        var main=document.getElementById("main");
+
+        function getsrc(elme){
+                main.src=elme.src; 
+                 // main.style.backgroundImage=url($(src));
+        } 
+    </script>
+</body>
+</html>

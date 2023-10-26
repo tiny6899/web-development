@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task 4</title>
+    <style>
+      /* parent 1 */
+      .parent1 {
+        width: 1000px;
+        height: 600px;
+        border: 1px solid black;
+        margin: auto;
+        position: relative;
+      }
+
+      /* box1 */
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: 1s;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .parent1:hover .box1 {
+        top: 0;
+        left: 900px;
+      }
+      /* box 2 */
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        transition: 1s;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .parent1:hover .box2 {
+        bottom: 500px;
+        left: 0;
+      }
+      /* box3 */
+
+      .box3 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        transition: 1s;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      .parent1:hover .box3 {
+        bottom: 0px;
+        right: 900px;
+      }
+      /* box4 */
+
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        transition: 1s;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .parent1:hover .box4 {
+        top: 500px;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent1">
+      <div class="box1">7th b1</div>
+      <div class="box2">7th b2</div>
+      <div class="box3">7th b3</div>
+      <div class="box4">7th b4</div>
+    </div>
+  </body>
+</html>
